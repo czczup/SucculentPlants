@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/i_blossom"
+        android:checked="true"
+        android:icon="@drawable/ic_blossom_24dp"
+        android:title="@string/blossom" />
+
+    <item
+        android:id="@+id/i_handbook"
+        android:icon="@drawable/ic_handbook_24dp"
+        android:title="@string/handbook" />
+    <!--must set the item title to empty-->
+    <item
+        android:id="@+id/i_empty"
+        android:title="" />
+    <item
+        android:id="@+id/i_parterre"
+        android:icon="@drawable/ic_flower_24dp"
+        android:title="@string/parterre" />
+    <item
+        android:id="@+id/i_mine"
+        android:icon="@drawable/ic_mine_24dp"
+        android:title="@string/mine" />
+</menu>

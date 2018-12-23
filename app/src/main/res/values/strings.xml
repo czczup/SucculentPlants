@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SucculentPlants</string>
+    <string name="blossom">花间</string>
+    <string name="handbook">图鉴</string>
+    <string name="camera">相机</string>
+    <string name="parterre">花圃</string>
+    <string name="mine">我的</string>
+</resources>
