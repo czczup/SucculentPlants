@@ -14,9 +14,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.succulent.wztxy.succulentplants.R;
 import com.succulent.wztxy.succulentplants.fragment.BaseFragment;
 import com.succulent.wztxy.succulentplants.databinding.ActivityMainBinding;
+import com.succulent.wztxy.succulentplants.mine.fragment.MineFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         parterreFragment.setArguments(bundle);
 
         // create mine fragment and add it
-        BaseFragment mineFragment = new BaseFragment();
+        MineFragment mineFragment = new MineFragment();
         bundle = new Bundle();
         bundle.putString("title", getString(R.string.mine));
         mineFragment.setArguments(bundle);

@@ -8,12 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.gyf.barlibrary.ImmersionBar;
+import com.gyf.barlibrary.SimpleImmersionFragment;
 import com.succulent.wztxy.succulentplants.R;
 import com.succulent.wztxy.succulentplants.databinding.FragBaseBinding;
 
-/**
- * Created by yu on 2016/11/11.
- */
 
 public class BaseFragment extends Fragment {
     private String title;
@@ -35,4 +34,9 @@ public class BaseFragment extends Fragment {
         binding.tvTitle.setText(title);
         return view;
     }
+
+//    @Override
+//    public void initImmersionBar() {
+//        ImmersionBar.with(this).init();
+//    }
 }
