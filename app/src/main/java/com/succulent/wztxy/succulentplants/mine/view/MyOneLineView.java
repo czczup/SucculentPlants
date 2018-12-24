@@ -1,6 +1,7 @@
 package com.succulent.wztxy.succulentplants.mine.view;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -161,7 +162,24 @@ public class MyOneLineView extends LinearLayout {
         editContent.setText(getResources().getString(textEditResId));
         editContent.setHint(getResources().getString(textHintResId));
         editContent.setSelection(getResources().getString(textEditResId).length());
-//        setRootPaddingLeftRight(15, 15);
+        setRootPadding(15,15,10,10);
+        showEdit(true);
+        return this;
+    }
+
+
+    public MyOneLineView initEditView(int textEditResId, int textHintResId, int minRow) {
+        init();
+        showLeftIcon(false);
+        setLeftIconSize(0, 0);
+        tvTextContent.setLayoutParams(new LinearLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT, 0.0f));
+        setIvRightIcon(R.drawable.ic_clear_24dp);
+        editContent.setText(getResources().getString(textEditResId));
+        editContent.setHint(getResources().getString(textHintResId));
+        editContent.setSelection(getResources().getString(textEditResId).length());
+        editContent.setMinLines(minRow);
+        editContent.setGravity(Gravity.TOP);
+        showArrow(false);
         setRootPadding(15,15,10,10);
         showEdit(true);
         return this;

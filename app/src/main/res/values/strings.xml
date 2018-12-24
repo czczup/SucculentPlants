@@ -11,6 +11,8 @@
     <string name="personalInformation">个人信息</string>
     <string name="recognitionHistory">识别历史</string>
     <string name="myContribution">我的贡献</string>
+    <string name="toRoast">我要吐槽</string>
+    <string name="submitAdvice">提交建议</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -30,4 +32,8 @@
     <string name="inReview">审核中</string>
     <string name="notPass">未通过</string>
     <string name="pass">已通过</string>
+    <string name="title_activity_roast">RoastActivity</string>
+    <string name="adviceHint">请输入您的意见和建议</string>
+    <string name="addressHint">您是否愿意留下联系方式？</string>
+    <string name="emptyAdviceHint">建议不能为空</string>
 </resources>

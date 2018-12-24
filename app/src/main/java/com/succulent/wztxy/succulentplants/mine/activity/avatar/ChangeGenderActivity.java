@@ -58,7 +58,6 @@ public class ChangeGenderActivity extends BaseActivity implements MyOneLineView.
 
     @Override
     public void onRootClick(View view) {
-        Intent intent = new Intent();
         switch ((int) view.getTag()) {
             case 0:
                 bind.maleItem.showArrow(true);

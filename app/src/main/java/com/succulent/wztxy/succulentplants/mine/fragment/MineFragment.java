@@ -15,6 +15,7 @@ import com.succulent.wztxy.succulentplants.databinding.FragmentMineBinding;
 import com.succulent.wztxy.succulentplants.mine.activity.avatar.AvatarActivity;
 import com.succulent.wztxy.succulentplants.mine.activity.contribution.MyContributionActivity;
 import com.succulent.wztxy.succulentplants.mine.activity.history.RecognitionHistoryActivity;
+import com.succulent.wztxy.succulentplants.mine.activity.roast.RoastActivity;
 import com.succulent.wztxy.succulentplants.mine.view.MyOneLineView;
 
 
@@ -79,6 +80,10 @@ public class MineFragment extends BaseFragment implements MyOneLineView.OnRootCl
                 break;
             case 2:
                 intent.setClass(getActivity(), MyContributionActivity.class);
+                startActivity(intent);
+                break;
+            case 4:
+                intent.setClass(getActivity(), RoastActivity.class);
                 startActivity(intent);
                 break;
         }

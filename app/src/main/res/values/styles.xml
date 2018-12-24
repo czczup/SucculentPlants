@@ -17,4 +17,17 @@
         <item name="android:textColor">@color/colorGray</item>
     </style>
 
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="common_button_style" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/selector_corners_button</item>
+        <item name="android:padding">6.0dip</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+
+    </style>
+
+
 </resources>
