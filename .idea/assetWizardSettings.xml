@@ -14,8 +14,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_right_24dp" />
-                            <entry key="sourceFile" value="D:\对.svg" />
+                            <entry key="height" value="36" />
+                            <entry key="outputName" value="ic_plant_36dp" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="D:\plant (1).svg" />
+                            <entry key="width" value="36" />
                           </map>
                         </option>
                       </PersistentState>

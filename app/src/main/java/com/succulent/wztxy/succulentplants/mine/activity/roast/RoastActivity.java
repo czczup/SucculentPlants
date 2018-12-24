@@ -3,7 +3,6 @@ package com.succulent.wztxy.succulentplants.mine.activity.roast;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.gyf.barlibrary.ImmersionBar;
@@ -31,6 +30,8 @@ public class RoastActivity extends BaseActivity {
             public void onClick(View v) {
                 if (bind.adviceItem.getEditContent().length() == 0) {
                     Toast.makeText(RoastActivity.this, R.string.emptyAdviceHint, Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(RoastActivity.this, R.string.successAdviceHint, Toast.LENGTH_SHORT).show();
                 }
             }
         });

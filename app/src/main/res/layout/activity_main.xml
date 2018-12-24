@@ -19,7 +19,7 @@
             app:itemTextColor="@color/selector_item_primary_color"
             app:menu="@menu/menu_navigation_center_fab" />
 
-        <android.support.v4.view.ViewPager
+        <com.succulent.wztxy.succulentplants.common.util.NoScrollViewPager
             android:id="@+id/vp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

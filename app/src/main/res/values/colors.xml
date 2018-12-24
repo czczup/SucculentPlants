@@ -7,6 +7,7 @@
     <color name="colorBlack">#000000</color>
     <color name="selector_item_color">#000000</color>
     <color name="colorGray">#ccc</color>
+    <color name="colorDeepGray">#646464</color>
     <color name="colorDeepGreen">#64848A</color>
     <color name="colorGreen">#a5fd32</color>
 </resources>

@@ -10,8 +10,7 @@ public class HandbookFragment extends BaseFragment {
     public void initImmersionBar() {
         super.initImmersionBar();
         ImmersionBar.with(this)
-                .statusBarDarkFont(true, 0.2f)
-                .fitsSystemWindows(true)
+                .statusBarDarkFont(true)
                 .init();
     }
 }

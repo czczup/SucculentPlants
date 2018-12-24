@@ -94,7 +94,7 @@ public class MineFragment extends BaseFragment implements MyOneLineView.OnRootCl
     public void initImmersionBar() {
         super.initImmersionBar();
         ImmersionBar.with(this)
-                .statusBarDarkFont(true, 0.2f)
+                .statusBarDarkFont(true)
                 .fitsSystemWindows(true)
                 .statusBarColor(R.color.colorWhite)
                 .init();

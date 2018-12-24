@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.succulent.wztxy.succulentplants.R;
-import com.succulent.wztxy.succulentplants.util.DensityUtils;
+import com.succulent.wztxy.succulentplants.common.util.DensityUtils;
 
 
 public class MyOneLineView extends LinearLayout {

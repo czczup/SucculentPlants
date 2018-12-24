@@ -9,7 +9,6 @@ public class ParterreFragment extends BaseFragment {
         super.initImmersionBar();
         ImmersionBar.with(this)
                 .statusBarDarkFont(true, 0.2f)
-                .fitsSystemWindows(true)
                 .init();
     }
 }

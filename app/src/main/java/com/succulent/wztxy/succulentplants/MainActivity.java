@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.succulent.wztxy.succulentplants.blossom.fragment.BlossomFragment;
 import com.succulent.wztxy.succulentplants.common.activity.BaseActivity;
+import com.succulent.wztxy.succulentplants.common.util.NoScrollViewPager;
 import com.succulent.wztxy.succulentplants.databinding.ActivityMainBinding;
 import com.succulent.wztxy.succulentplants.handbook.fragment.HandbookFragment;
 import com.succulent.wztxy.succulentplants.mine.fragment.MineFragment;
@@ -35,7 +36,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bind = DataBindingUtil.setContentView(this, R.layout.activity_main);
-
         initData();
         initView();
         initEvent();
@@ -91,6 +91,8 @@ public class MainActivity extends BaseActivity {
         // set adapter
         adapter = new VpAdapter(getSupportFragmentManager(), fragments);
         bind.vp.setAdapter(adapter);
+        bind.vp.setNoScroll(true);
+
     }
 
     /**
@@ -132,7 +134,7 @@ public class MainActivity extends BaseActivity {
         });
 
         // set listener to change the current checked item of bottom nav when scroll view pager
-        bind.vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        bind.vp.addOnPageChangeListener(new NoScrollViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 

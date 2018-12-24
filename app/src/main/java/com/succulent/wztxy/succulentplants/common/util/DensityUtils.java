@@ -1,4 +1,4 @@
-package com.succulent.wztxy.succulentplants.util;
+package com.succulent.wztxy.succulentplants.common.util;
 
 import android.content.Context;
 import android.util.TypedValue;
