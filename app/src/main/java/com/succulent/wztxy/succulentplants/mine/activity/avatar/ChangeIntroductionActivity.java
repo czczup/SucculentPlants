@@ -30,7 +30,7 @@ public class ChangeIntroductionActivity extends BaseActivity implements MyOneLin
     }
 
     private void initView() {
-        bind.introductionItem.initEditView(R.string.introduction, R.string.hintintroduction);
+        bind.introductionItem.initEditView(R.string.introduction, R.string.hintIntroduction);
     }
 
     protected void initImmersionBar() {

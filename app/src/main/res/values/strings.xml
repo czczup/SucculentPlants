@@ -9,6 +9,8 @@
     <string name="changeGender">修改性别</string>
     <string name="changeIntroduction">修改签名</string>
     <string name="personalInformation">个人信息</string>
+    <string name="recognitionHistory">识别历史</string>
+    <string name="myContribution">我的贡献</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -24,5 +26,8 @@
     <string name="infoItem1">昵称</string>
     <string name="infoItem2">性别</string>
     <string name="infoItem3">签名</string>
-    <string name="hintintroduction">请输入签名</string>
+    <string name="hintIntroduction">请输入签名</string>
+    <string name="inReview">审核中</string>
+    <string name="notPass">未通过</string>
+    <string name="pass">已通过</string>
 </resources>

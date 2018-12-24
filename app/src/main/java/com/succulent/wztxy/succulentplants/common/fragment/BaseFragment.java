@@ -36,6 +36,9 @@ public class BaseFragment extends SimpleImmersionFragment {
 
     @Override
     public void initImmersionBar() {
-        ImmersionBar.with(this).keyboardEnable(true).init();
+        ImmersionBar.with(this)
+                .keyboardEnable(true)
+                .statusBarDarkFont(true, 0.2f)
+                .init();
     }
 }
