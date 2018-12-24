@@ -8,20 +8,22 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.succulent.wztxy.succulentplants.fragment.BaseFragment;
+import com.succulent.wztxy.succulentplants.blossom.fragment.BlossomFragment;
+import com.succulent.wztxy.succulentplants.common.activity.BaseActivity;
 import com.succulent.wztxy.succulentplants.databinding.ActivityMainBinding;
+import com.succulent.wztxy.succulentplants.handbook.fragment.HandbookFragment;
 import com.succulent.wztxy.succulentplants.mine.fragment.MineFragment;
+import com.succulent.wztxy.succulentplants.parterre.fragment.ParterreFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     private ActivityMainBinding bind;
     private VpAdapter adapter;
@@ -47,19 +49,19 @@ public class MainActivity extends AppCompatActivity {
         fragments = new ArrayList<>(4);
 
         // create ic_blossom_24dp fragment and add it
-        BaseFragment blossomFragment = new BaseFragment();
+        BlossomFragment blossomFragment = new BlossomFragment();
         Bundle bundle = new Bundle();
         bundle.putString("title", getString(R.string.blossom));
         blossomFragment.setArguments(bundle);
 
         // create handbook fragment and add it
-        BaseFragment handbookFragment = new BaseFragment();
+        HandbookFragment handbookFragment = new HandbookFragment();
         bundle = new Bundle();
         bundle.putString("title", getString(R.string.handbook));
         handbookFragment.setArguments(bundle);
 
         // create parterre fragment and add it
-        BaseFragment parterreFragment = new BaseFragment();
+        ParterreFragment parterreFragment = new ParterreFragment();
         bundle = new Bundle();
         bundle.putString("title", getString(R.string.parterre));
         parterreFragment.setArguments(bundle);

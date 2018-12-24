@@ -1,9 +1,8 @@
-package com.succulent.wztxy.succulentplants.fragment;
+package com.succulent.wztxy.succulentplants.common.fragment;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,12 +10,12 @@ import android.view.ViewGroup;
 import com.gyf.barlibrary.ImmersionBar;
 import com.gyf.barlibrary.SimpleImmersionFragment;
 import com.succulent.wztxy.succulentplants.R;
-import com.succulent.wztxy.succulentplants.databinding.FragBaseBinding;
+import com.succulent.wztxy.succulentplants.databinding.FragmentBaseBinding;
 
 
-public class BaseFragment extends Fragment {
+public class BaseFragment extends SimpleImmersionFragment {
     private String title;
-    FragBaseBinding binding;
+    FragmentBaseBinding binding;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,15 +27,15 @@ public class BaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = View.inflate(getContext(), R.layout.frag_base, null);
+        View view = View.inflate(getContext(), R.layout.fragment_base, null);
         // bind view
         binding = DataBindingUtil.bind(view);
         binding.tvTitle.setText(title);
         return view;
     }
 
-//    @Override
-//    public void initImmersionBar() {
-//        ImmersionBar.with(this).init();
-//    }
+    @Override
+    public void initImmersionBar() {
+        ImmersionBar.with(this).keyboardEnable(true).init();
+    }
 }

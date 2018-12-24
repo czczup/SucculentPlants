@@ -5,7 +5,24 @@
     <string name="camera">相机</string>
     <string name="parterre">花圃</string>
     <string name="mine">我的</string>
+    <string name="changeNickname">修改昵称</string>
+    <string name="changeGender">修改性别</string>
+    <string name="changeIntroduction">修改签名</string>
+    <string name="personalInformation">个人信息</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nickname">熊童子饲养员</string>
+    <string name="hintChangeNickname">请输入昵称</string>
+    <string name="hintNickname">请输入昵称</string>
+    <string name="gender">男</string>
+    <string name="hintGender">请选择性别</string>
+    <string name="empty"></string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="introduction">落花时节又逢君</string>
+    <string name="infoItem1">昵称</string>
+    <string name="infoItem2">性别</string>
+    <string name="infoItem3">签名</string>
+    <string name="hintintroduction">请输入签名</string>
 </resources>

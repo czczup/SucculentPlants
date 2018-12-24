@@ -122,6 +122,24 @@ public class MyOneLineView extends LinearLayout {
     }
 
     /**
+     * 我的页面每一行   文字 + 右箭头左边的文字（显示/不显示）+ 下分割线
+     *
+     * @param textRight   右箭头左边的文字
+     * @param textContent 文字内容
+     */
+    public MyOneLineView initDoubleText(int textContentResId, int textRightResId) {
+        init();
+        setTextContent(getResources().getString(textContentResId));
+        setRightText(getResources().getString(textRightResId));
+        setLeftIconSize(0, 0);
+        setRootPadding(0,15,10,10);
+        showEdit(false);
+        showArrow(false);
+        return this;
+    }
+
+
+    /**
      * 我的页面每一行  icon + 文字 + 右箭头（显示/不显示） + 右箭头左边的文字（显示/不显示）+ 下分割线
      *
      * @param iconRes     icon图片
@@ -131,6 +149,21 @@ public class MyOneLineView extends LinearLayout {
         init(iconRes, textContent);
         setRightText(textRight);
         showArrow(showArrow);
+        return this;
+    }
+
+    public MyOneLineView initEditView(int textEditResId, int textHintResId) {
+        init();
+        showLeftIcon(false);
+        setLeftIconSize(0, 0);
+        tvTextContent.setLayoutParams(new LinearLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT, 0.0f));
+        setIvRightIcon(R.drawable.ic_clear_24dp);
+        editContent.setText(getResources().getString(textEditResId));
+        editContent.setHint(getResources().getString(textHintResId));
+        editContent.setSelection(getResources().getString(textEditResId).length());
+//        setRootPaddingLeftRight(15, 15);
+        setRootPadding(15,15,10,10);
+        showEdit(true);
         return this;
     }
 
@@ -167,11 +200,19 @@ public class MyOneLineView extends LinearLayout {
      * <p>
      * paddingTop 与 paddingBottom 保持默认 15dp
      */
-    public MyOneLineView setRootPaddingLeftRight(int paddintTop, int paddintRight) {
-        llRoot.setPadding(DensityUtils.dp2px(getContext(), paddintTop),
+    public MyOneLineView setRootPaddingLeftRight(int paddintLeft, int paddintRight) {
+        llRoot.setPadding(DensityUtils.dp2px(getContext(), paddintLeft),
                 DensityUtils.dp2px(getContext(), 15),
                 DensityUtils.dp2px(getContext(), paddintRight),
                 DensityUtils.dp2px(getContext(), 15));
+        return this;
+    }
+
+    public MyOneLineView setRootPadding(int paddintLeft, int paddintRight, int paddintTop, int paddintBottom) {
+        llRoot.setPadding(DensityUtils.dp2px(getContext(), paddintLeft),
+                DensityUtils.dp2px(getContext(), paddintTop),
+                DensityUtils.dp2px(getContext(), paddintRight),
+                DensityUtils.dp2px(getContext(), paddintBottom));
         return this;
     }
 
@@ -262,6 +303,8 @@ public class MyOneLineView extends LinearLayout {
         return this;
     }
 
+
+
     /**
      * 设置右边Icon 以及Icon的宽高
      */
@@ -284,6 +327,7 @@ public class MyOneLineView extends LinearLayout {
         tvTextContent.setText(textContent);
         return this;
     }
+
 
     /**
      * 设置中间的文字颜色
@@ -360,6 +404,14 @@ public class MyOneLineView extends LinearLayout {
         return this;
     }
 
+    public MyOneLineView setRightIconSize(int widthDp, int heightDp) {
+        ViewGroup.LayoutParams layoutParams = ivLeftIcon.getLayoutParams();
+        layoutParams.width = DensityUtils.dp2px(getContext(), widthDp);
+        layoutParams.height = DensityUtils.dp2px(getContext(), heightDp);
+        ivRightIcon.setLayoutParams(layoutParams);
+        return this;
+    }
+
     /**
      * 获取右边icon
      */
@@ -422,14 +474,15 @@ public class MyOneLineView extends LinearLayout {
     /**
      * 获取Edit输入的内容
      *
-     * @param s
      * @return
      */
-    public String getEditContent(String s) {
+    public String getEditContent() {
         return String.valueOf(editContent.getText());
-
     }
 
+    public String getRightTextContent() {
+        return String.valueOf(tvRightText.getText());
+    }
 
     /**
      * 设置 edit 颜色

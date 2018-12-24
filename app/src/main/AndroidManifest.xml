@@ -16,6 +16,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".mine.activity.avatar.AvatarActivity">
+        </activity>
+
+        <activity android:name=".mine.activity.avatar.ChangeAvatarActivity">
+        </activity>
+
+        <activity android:name=".mine.activity.avatar.ChangeGenderActivity">
+        </activity>
+
+        <activity android:name=".mine.activity.avatar.ChangeIntroductionActivity">
+        </activity>
+
+        <activity android:name=".mine.activity.avatar.ChangeNicknameActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,22 +1,22 @@
 package com.succulent.wztxy.succulentplants.mine.fragment;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.gyf.barlibrary.ImmersionBar;
-import com.gyf.barlibrary.SimpleImmersionFragment;
 import com.succulent.wztxy.succulentplants.R;
+import com.succulent.wztxy.succulentplants.common.fragment.BaseFragment;
 import com.succulent.wztxy.succulentplants.databinding.FragmentMineBinding;
-import com.succulent.wztxy.succulentplants.fragment.BaseFragment;
+import com.succulent.wztxy.succulentplants.mine.activity.avatar.AvatarActivity;
 import com.succulent.wztxy.succulentplants.mine.view.MyOneLineView;
 
 
-public class MineFragment extends BaseFragment implements MyOneLineView.OnRootClickListener, MyOneLineView.OnArrowClickListener{
+public class MineFragment extends BaseFragment implements MyOneLineView.OnRootClickListener{
     FragmentMineBinding binding;
 
     @Override
@@ -38,7 +38,8 @@ public class MineFragment extends BaseFragment implements MyOneLineView.OnRootCl
                 .setTextContentSize(20).setRootPaddingTopBottom(20, 20);
 
         binding.historyItem.initMine(R.drawable.ic_plant1_24dp, "识别历史", "", true)
-                .setOnRootClickListener(this, 1);
+                .setOnRootClickListener(this, 1)
+                .showDivider(true, true);
 
         binding.contributionItem.initMine(R.drawable.ic_plant2_24dp, "我的贡献", "", true)
                 .setOnRootClickListener(this, 2);
@@ -64,32 +65,27 @@ public class MineFragment extends BaseFragment implements MyOneLineView.OnRootCl
 
     @Override
     public void onRootClick(View view) {
-
-        int position = 0;
+        Intent intent = new Intent();
         switch ((int) view.getTag()) {
-            case 1:
-                position = 1;
+            case 0:
+                intent.setClass(getActivity(), AvatarActivity.class);
+                startActivity(intent);
                 break;
-            case 2:
-                position = 2;
+            case 1:
+                intent.setClass(getActivity(), AvatarActivity.class);
+                startActivity(intent);
                 break;
         }
-        Toast.makeText(getActivity(), "点击了第" + position + "行", Toast.LENGTH_SHORT).show();
     }
+
 
     @Override
-    public void onArrowClick(View view) {
-
-        int position = 0;
-        switch ((int) view.getTag()) {
-            case 1:
-                position = 1;
-                break;
-            case 2:
-                position = 2;
-                break;
-        }
-        Toast.makeText(getActivity(), "点击了第" + position + "行右边的箭头", Toast.LENGTH_SHORT).show();
+    public void initImmersionBar() {
+        super.initImmersionBar();
+        ImmersionBar.with(this)
+                .statusBarDarkFont(true, 0.2f)
+                .fitsSystemWindows(true)
+                .statusBarColor(R.color.colorWhite)
+                .init();
     }
-
 }
