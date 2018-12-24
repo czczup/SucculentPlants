@@ -3,30 +3,57 @@
 
 <data></data>
 
-<LinearLayout
-    android:id="@+id/blossom_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-
-    <com.youth.banner.Banner
-        android:id="@+id/banner"
-        android:layout_width="match_parent"
-        android:layout_height="220dp" />
-
-    <include layout="@layout/blossom_bar_item"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/ctl_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+            <include android:id="@+id/navigation_bar"
+                layout="@layout/blossom_bar_item"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.NestedScrollView>
 
 
 
-    </android.support.v7.widget.RecyclerView>
+    </android.support.design.widget.CoordinatorLayout>
 
-</LinearLayout>
 
 </layout>

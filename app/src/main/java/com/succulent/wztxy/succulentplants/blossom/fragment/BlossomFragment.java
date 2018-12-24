@@ -50,7 +50,7 @@ public class BlossomFragment extends BaseFragment {
         blossomArticleAdapter = new BlossomArticleAdapter(R.layout.article_item, texts);
         bind.recyclerView.setAdapter(blossomArticleAdapter);
         bind.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
+        bind.recyclerView.setNestedScrollingEnabled(false);
 
     }
 
