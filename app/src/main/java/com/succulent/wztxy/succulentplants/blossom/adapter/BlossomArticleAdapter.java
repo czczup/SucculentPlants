@@ -17,7 +17,7 @@ public class BlossomArticleAdapter extends BaseQuickAdapter<String, BaseViewHold
 
     @Override
     protected void convert(BaseViewHolder helper, String item) {
-        helper.setText(R.id.item_text, item);
+//        helper.setText(R.id.item_text, item);
 //        helper.setImageResource(R.id.icon, item.getImageResource());
         // 加载网络图片
 //        Glide.with(mContext).load(item.getUserAvatar()).crossFade().into((ImageView) helper.getView(R.id.iv));

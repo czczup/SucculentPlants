@@ -8,6 +8,7 @@
     <color name="selector_item_color">#000000</color>
     <color name="colorGray">#ccc</color>
     <color name="colorDeepGray">#646464</color>
+    <color name="colorMoreDeepGray">#4b4b4b</color>
     <color name="colorDeepGreen">#64848A</color>
     <color name="colorGreen">#a5fd32</color>
 </resources>
