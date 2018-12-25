@@ -3,11 +3,11 @@ package com.succulent.wztxy.succulentplants.blossom.fragment;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.succulent.wztxy.succulentplants.R;
@@ -47,11 +47,12 @@ public class BlossomFragment extends BaseFragment {
         for (int i = 0; i < 50; i++) {
             texts.add("测试用例"+i);
         }
-        blossomArticleAdapter = new BlossomArticleAdapter(R.layout.article_item, texts);
+        blossomArticleAdapter = new BlossomArticleAdapter(R.layout.item_article, texts);
         bind.recyclerView.setAdapter(blossomArticleAdapter);
         bind.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         bind.recyclerView.setNestedScrollingEnabled(false);
-
+        ((AppCompatActivity) getActivity()).setSupportActionBar(bind.toolbar);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     private void initView() {
@@ -61,6 +62,7 @@ public class BlossomFragment extends BaseFragment {
         bind.banner.setImageLoader(new GlideImageLoader());
         bind.banner.setImages(images);
         bind.banner.start();
+
     }
 
     @Override
@@ -68,6 +70,7 @@ public class BlossomFragment extends BaseFragment {
         super.initImmersionBar();
         ImmersionBar.with(this)
                 .statusBarDarkFont(true)
+//                .titleBar(bind.toolbar)
                 .init();
     }
 }

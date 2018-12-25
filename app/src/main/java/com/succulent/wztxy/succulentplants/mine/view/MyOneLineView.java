@@ -78,7 +78,7 @@ public class MyOneLineView extends LinearLayout {
      * 初始化各个控件
      */
     public MyOneLineView init() {
-        LayoutInflater.from(getContext()).inflate(R.layout.mine_item, this, true);
+        LayoutInflater.from(getContext()).inflate(R.layout.item_mine, this, true);
         llRoot = findViewById(R.id.ll_root);
         dividerTop = findViewById(R.id.divider_top);
         dividerBottom = findViewById(R.id.divider_bottom);

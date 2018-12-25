@@ -22,17 +22,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|bottom"
-                app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+                app:contentScrim="@color/colorWhite"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed">
 
                 <com.youth.banner.Banner
                     android:id="@+id/banner"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp" />
+                    android:layout_height="220dp"/>
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    app:layout_collapseMode="pin"
+                    android:layout_gravity="bottom" />
 
 
             </android.support.design.widget.CollapsingToolbarLayout>
+
             <include android:id="@+id/navigation_bar"
-                layout="@layout/blossom_bar_item"/>
+                layout="@layout/item_blossom_bar"/>
 
         </android.support.design.widget.AppBarLayout>
 
