@@ -28,12 +28,6 @@ public class BlossomArticleAdapter extends BaseQuickAdapter<ArticleItem, BaseVie
         helper.setText(R.id.author,"文/"+item.getAccount_name());
         helper.setText(R.id.category_title, "文章·"+item.getKeyword());
         Glide.with(mContext).load(item.getCover_image()).crossFade().into((ImageView) helper.getView(R.id.cover_image));
-
         helper.addOnClickListener(R.id.article_card);
-
-//        helper.setText(R.id.item_text, item);
-//        helper.setImageResource(R.id.icon, item.getImageResource());
-        // 加载网络图片
-//        Glide.with(mContext).load(item.getUserAvatar()).crossFade().into((ImageView) helper.getView(R.id.iv));
     }
 }

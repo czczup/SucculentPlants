@@ -24,6 +24,7 @@ import com.gyf.barlibrary.ImmersionBar;
 import com.succulent.wztxy.succulentplants.MainActivity;
 import com.succulent.wztxy.succulentplants.R;
 import com.succulent.wztxy.succulentplants.blossom.activity.ArticleActivity;
+import com.succulent.wztxy.succulentplants.blossom.activity.CategroyArticleActivity;
 import com.succulent.wztxy.succulentplants.blossom.adapter.BlossomArticleAdapter;
 import com.succulent.wztxy.succulentplants.blossom.model.ArticleItem;
 import com.succulent.wztxy.succulentplants.blossom.tool.HttpUtil;
@@ -74,26 +75,23 @@ public class BlossomFragment extends BaseFragment {
         LinearLayout interestingPlantsItem = bind.navigationBar.findViewById(R.id.interestingPlantsItem);
         LinearLayout flowerArtLifeItem = bind.navigationBar.findViewById(R.id.flowerArtLifeItem);
         LinearLayout plantsCultivateItem = bind.navigationBar.findViewById(R.id.plantsCultivateItem);
-        addOnCLickListener(plantRecommendItem);
-        addOnCLickListener(seniorColumnItem);
-        addOnCLickListener(interestingPlantsItem);
-        addOnCLickListener(flowerArtLifeItem);
-        addOnCLickListener(plantsCultivateItem);
-    }
-
-    private void addOnCLickListener(LinearLayout layout, int tag) {
-        layout.setOnClickListener((v)->{
-
+        plantRecommendItem.setOnClickListener((v)->{
+            CategroyArticleActivity.actionStart(getActivity(), getString(R.string.plantRecommend));
         });
-        layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                switch (tag) {
-
-                }
-            }
+        seniorColumnItem.setOnClickListener((v)->{
+            CategroyArticleActivity.actionStart(getActivity(), getString(R.string.seniorColumn));
+        });
+        interestingPlantsItem.setOnClickListener((v)->{
+            CategroyArticleActivity.actionStart(getActivity(), getString(R.string.interestingPlants));
+        });
+        flowerArtLifeItem.setOnClickListener((v)->{
+            CategroyArticleActivity.actionStart(getActivity(), getString(R.string.flowerArtLife));
+        });
+        plantsCultivateItem.setOnClickListener((v)->{
+            CategroyArticleActivity.actionStart(getActivity(), getString(R.string.plantsCultivate));
         });
     }
+
 
     private void initRecyclerView() {
         blossomArticleAdapter = new BlossomArticleAdapter(R.layout.item_article, articles);
