@@ -36,7 +36,8 @@
             android:label="@string/title_activity_roast"
             android:theme="@style/AppTheme" />
         <activity android:name=".blossom.activity.ArticleActivity" />
-        <activity android:name=".blossom.activity.CategroyArticleActivity"></activity>
+        <activity android:name=".blossom.activity.CategroyArticleActivity" />
+        <activity android:name=".handbook.activity.InformationActivity"></activity>
     </application>
 
 </manifest>
