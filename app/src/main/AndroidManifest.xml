@@ -7,6 +7,7 @@
 
     <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        android:networkSecurityConfig="@xml/network_security_config"
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +35,8 @@
             android:name=".mine.activity.roast.RoastActivity"
             android:label="@string/title_activity_roast"
             android:theme="@style/AppTheme" />
-
+        <activity android:name=".blossom.activity.ArticleActivity" />
+        <activity android:name=".blossom.activity.CategroyArticleActivity"></activity>
     </application>
 
 </manifest>

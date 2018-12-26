@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/article_card"
-    android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
-    android:layout_marginTop="5dp"
-    android:orientation="vertical"
-    android:background="@color/colorWhite">
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_marginTop="10dp">
 
     <LinearLayout
+        android:id="@+id/article_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:clickable="true"
+        android:focusable="true"
         android:background="?android:attr/selectableItemBackground">
 
         <View
@@ -42,8 +41,9 @@
             <ImageView
                 android:id="@+id/cover_image"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:background="@mipmap/article_image" />
+                android:layout_height="150dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
 
             <TextView
                 android:id="@+id/main_title"
@@ -72,6 +72,7 @@
                 android:layout_marginTop="10dp"/>
 
             <TextView
+                android:id="@+id/author"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -92,4 +93,5 @@
     </LinearLayout>
 
 
-</LinearLayout>
+
+</FrameLayout>

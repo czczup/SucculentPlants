@@ -13,11 +13,13 @@
     <string name="myContribution">我的贡献</string>
     <string name="toRoast">我要吐槽</string>
     <string name="submitAdvice">提交建议</string>
-    <string name="plantRecommend">多肉推荐</string>
+    <string name="plantRecommend">多肉花园</string>
     <string name="interestingPlants">趣味植物</string>
     <string name="flowerArtLife">花艺生活</string>
     <string name="plantsCultivate">绿植护养</string>
     <string name="seniorColumn">资深专栏</string>
+    <string name="articleWebView">文章</string>
+    <string name="ApiUrl">120.79.162.134:7008</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -13,6 +13,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/plantRecommendItem"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
@@ -39,6 +40,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/seniorColumnItem"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
@@ -64,6 +66,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/interestingPlantsItem"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
@@ -89,6 +92,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/flowerArtLifeItem"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
@@ -114,6 +118,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/plantsCultivateItem"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
