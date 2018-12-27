@@ -23,10 +23,21 @@ public class InformationActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         bind = DataBindingUtil.setContentView(this, R.layout.activity_information);
         initImmersionBar();
+        intent = getIntent();
         species = intent.getStringExtra("species");
         Log.d(TAG, "onCreate: "+species);
+        initToolBar();
+        initEvent();
     }
 
+
+    private void initEvent() {
+        bind.toolbar.setNavigationOnClickListener(view -> finish());
+    }
+
+    private void initToolBar() {
+        bind.textView.setText(species);
+    }
 
 
     protected void initImmersionBar() {

@@ -3,6 +3,7 @@ package com.succulent.wztxy.succulentplants.handbook.fragment;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HandbookFragment extends BaseFragment {
+    private static final String TAG = "HandbookFragment";
     FragmentHandbookBinding bind;
     private List<TextView> historyItems;
     private List<TextView> hotItems;
@@ -56,13 +58,9 @@ public class HandbookFragment extends BaseFragment {
         hotTitles.add("红粉佳人");
         hotTitles.add("红化妆");
         setText(hotTitles, hotItems);
-//        addOnClickListener(hotItems);
-    }
-
-    private void addOnClickListener(List<TextView> items) {
-        for (TextView tv : items) {
-            tv.setOnClickListener(v -> {
-                InformationActivity.actionStart(getContext(), tv.getText().toString());
+        for (TextView textview : hotItems) {
+            textview.setOnClickListener(v -> {
+                InformationActivity.actionStart(getActivity(), textview.getText().toString());
             });
         }
     }
@@ -83,7 +81,11 @@ public class HandbookFragment extends BaseFragment {
         historyTitles.add("冰梅");
         historyTitles.add("橙梦露");
         setText(historyTitles, historyItems);
-//        addOnClickListener(hotItems);
+        for (TextView textview : historyItems) {
+            textview.setOnClickListener(v -> {
+                InformationActivity.actionStart(getActivity(), textview.getText().toString());
+            });
+        }
     }
 
     private void setText(List<String> titles, List<TextView> items) {
