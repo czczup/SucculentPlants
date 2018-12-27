@@ -27,7 +27,6 @@ public class ParterreFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getContext(), R.layout.fragment_parterre, null);
         bind = DataBindingUtil.bind(view);
-//        initImmersionBar();
         return view;
     }
 

@@ -20,7 +20,6 @@ public class BaseFragment extends SimpleImmersionFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // get title
         title = getArguments().getString("title");
     }
 

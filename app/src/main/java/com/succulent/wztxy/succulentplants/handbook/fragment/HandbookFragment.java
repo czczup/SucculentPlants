@@ -36,7 +36,6 @@ public class HandbookFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getContext(), R.layout.fragment_handbook, null);
         bind = DataBindingUtil.bind(view);
-//        initImmersionBar();
         initHistorySearchItems();
         initHotItems();
         initSearchBar();

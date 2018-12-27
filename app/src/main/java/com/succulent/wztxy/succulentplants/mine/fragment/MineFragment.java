@@ -33,9 +33,7 @@ public class MineFragment extends BaseFragment implements MyOneLineView.OnRootCl
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getContext(), R.layout.fragment_mine, null);
-        // bind view
         binding = DataBindingUtil.bind(view);
-//        initImmersionBar();
         initView();
         return view;
     }
