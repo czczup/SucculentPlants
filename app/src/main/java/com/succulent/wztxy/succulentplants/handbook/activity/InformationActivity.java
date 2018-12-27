@@ -18,7 +18,7 @@ public class InformationActivity extends BaseActivity {
     ActivityInformationBinding bind;
     private static final String TAG = "InformationActivity";
     private Intent intent;
-    private String species;
+    private String keyword;
     protected AgentWeb mAgentWeb;
 
 
@@ -28,8 +28,8 @@ public class InformationActivity extends BaseActivity {
         bind = DataBindingUtil.setContentView(this, R.layout.activity_information);
         initImmersionBar();
         intent = getIntent();
-        species = intent.getStringExtra("species");
-        Log.d(TAG, "onCreate: "+species);
+        keyword = intent.getStringExtra("keyword");
+        Log.d(TAG, "onCreate: "+ keyword);
         initToolBar();
         initEvent();
         initView();
@@ -50,7 +50,7 @@ public class InformationActivity extends BaseActivity {
     }
 
     private void initToolBar() {
-        bind.textView.setText(species);
+        bind.textView.setText(keyword);
     }
 
 
