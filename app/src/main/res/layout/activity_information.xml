@@ -5,7 +5,7 @@
     <data></data>
 
     <LinearLayout
-        android:id="@+id/change_introduction"
+        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
@@ -22,6 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/colorBlack"
+                android:text="@string/succulentHandbook"
                 android:textSize="18sp"/>
         </android.support.v7.widget.Toolbar>
 

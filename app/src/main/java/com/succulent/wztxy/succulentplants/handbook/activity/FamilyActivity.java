@@ -1,7 +1,9 @@
 package com.succulent.wztxy.succulentplants.handbook.activity;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -37,6 +39,8 @@ public class FamilyActivity extends PlantCategoryActivity {
         initData();
         initRecyclerView();
     }
+
+
 
     private void initData() {
         String json = StreamUtils.get(FamilyActivity.this, R.raw.family);

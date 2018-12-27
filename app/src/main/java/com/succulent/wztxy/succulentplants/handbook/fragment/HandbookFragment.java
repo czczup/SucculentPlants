@@ -63,8 +63,6 @@ public class HandbookFragment extends BaseFragment {
     }
 
 
-
-
     private void initHotItems() {
         hotItems = new ArrayList<>();
         hotItems.add(bind.firstHotItems.findViewById(R.id.item_left));
@@ -77,8 +75,8 @@ public class HandbookFragment extends BaseFragment {
         hotTitles.add("八千代");
         hotTitles.add("虹之玉锦");
         hotTitles.add("芙蓉雪莲");
-        hotTitles.add("黑莓");
-        hotTitles.add("红粉佳人");
+        hotTitles.add("三日月美人");
+        hotTitles.add("白姬莲");
         hotTitles.add("红化妆");
         setText(hotTitles, hotItems);
         for (TextView textview : hotItems) {
@@ -101,8 +99,8 @@ public class HandbookFragment extends BaseFragment {
         historyTitles.add("虹之玉");
         historyTitles.add("厚叶月影");
         historyTitles.add("白牡丹");
-        historyTitles.add("冰梅");
-        historyTitles.add("橙梦露");
+        historyTitles.add("奥普琳娜");
+        historyTitles.add("爱染锦");
         setText(historyTitles, historyItems);
         for (TextView textview : historyItems) {
             textview.setOnClickListener(v -> {

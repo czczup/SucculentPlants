@@ -1,7 +1,9 @@
 package com.succulent.wztxy.succulentplants.handbook.activity;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -31,6 +33,7 @@ public class GenusActivity extends PlantCategoryActivity {
     private Intent intent;
     private int familyId;
     private Map<Integer, String> id2Name;
+    private MyReceiver receiver;
 
     @Override
     public ActivityPlantCategoryBinding getBind() {
@@ -47,12 +50,14 @@ public class GenusActivity extends PlantCategoryActivity {
         initData();
         initRecyclerView();
         initLinkTextView();
+        initReceiver();
     }
 
     private void initLinkTextView() {
         bind.rightArrow1.setVisibility(View.VISIBLE);
         bind.succulentLink2.setText(id2Name.get(familyId));
         bind.succulentLink1.setTextColor(getResources().getColor(R.color.colorPink));
+        bind.succulentLink1.setOnClickListener(v -> finish());
     }
 
     private void initData() {
@@ -85,10 +90,29 @@ public class GenusActivity extends PlantCategoryActivity {
         bind.recyclerView.setNestedScrollingEnabled(false);
     }
 
+    private void initReceiver() {
+        receiver = new MyReceiver();
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("android.intent.action.MY_RECEIVER");
+        registerReceiver(receiver, filter);
+    }
 
     public static void actionStart(Context context, int familyId) {
         Intent intent = new Intent(context, GenusActivity.class);
         intent.putExtra("familyId", familyId);
         context.startActivity(intent);
+    }
+
+    @Override
+    protected void onDestroy(){
+        unregisterReceiver(receiver);
+        super.onDestroy();
+    }
+
+    private class MyReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            GenusActivity.this.finish();
+        }
     }
 }

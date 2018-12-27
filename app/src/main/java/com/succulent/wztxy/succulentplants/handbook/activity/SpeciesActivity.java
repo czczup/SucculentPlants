@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.succulent.wztxy.succulentplants.R;
@@ -58,9 +59,17 @@ public class SpeciesActivity extends PlantCategoryActivity {
         bind.rightArrow1.setVisibility(View.VISIBLE);
         bind.succulentLink2.setText(id2Name.get(familyId));
         bind.succulentLink1.setTextColor(getResources().getColor(R.color.colorPink));
+        bind.succulentLink1.setOnClickListener(v -> {
+            Intent intent = new Intent();
+            intent.setAction("android.intent.action.MY_RECEIVER");
+            this.sendBroadcast(intent);
+            finish();
+        });
         bind.rightArrow2.setVisibility(View.VISIBLE);
         bind.succulentLink3.setText(id2Name.get(genusId));
         bind.succulentLink2.setTextColor(getResources().getColor(R.color.colorPink));
+        bind.succulentLink2.setOnClickListener(v -> finish());
+
     }
 
 
@@ -68,6 +77,12 @@ public class SpeciesActivity extends PlantCategoryActivity {
         speciesItemAdapter = new SpeciesItemAdapter(R.layout.item_empty, succulentSpecies);
         speciesItemAdapter.openLoadAnimation();
         speciesItemAdapter.setNotDoAnimationCount(3);
+        speciesItemAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                InformationActivity.actionStart(SpeciesActivity.this, succulentSpecies.get(position).getName_cn());
+            }
+        });
         bind.recyclerView.setAdapter(speciesItemAdapter);
         bind.recyclerView.setLayoutManager(new LinearLayoutManager(SpeciesActivity.this));
         bind.recyclerView.setNestedScrollingEnabled(false);

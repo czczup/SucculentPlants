@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
 
 import com.gyf.barlibrary.ImmersionBar;
+import com.just.agentweb.AgentWeb;
 import com.succulent.wztxy.succulentplants.R;
 import com.succulent.wztxy.succulentplants.common.activity.BaseActivity;
 import com.succulent.wztxy.succulentplants.databinding.ActivityInformationBinding;
@@ -17,6 +19,8 @@ public class InformationActivity extends BaseActivity {
     private static final String TAG = "InformationActivity";
     private Intent intent;
     private String species;
+    protected AgentWeb mAgentWeb;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,8 +32,18 @@ public class InformationActivity extends BaseActivity {
         Log.d(TAG, "onCreate: "+species);
         initToolBar();
         initEvent();
+        initView();
     }
 
+    private void initView() {
+        String keyword = intent.getStringExtra("keyword");
+        mAgentWeb = AgentWeb.with(this)//传入Activity
+                .setAgentWebParent(bind.linearLayout, new LinearLayout.LayoutParams(-1, -1))
+                .useDefaultIndicator()// 使用默认进度条
+                .createAgentWeb()//
+                .ready()
+                .go("https://baike.baidu.com/item/"+keyword);
+    }
 
     private void initEvent() {
         bind.toolbar.setNavigationOnClickListener(view -> finish());
@@ -50,9 +64,9 @@ public class InformationActivity extends BaseActivity {
                 .init();
     }
 
-    public static void actionStart(Context context, String species) {
+    public static void actionStart(Context context, String keyword) {
         Intent intent = new Intent(context, InformationActivity.class);
-        intent.putExtra("species", species);
+        intent.putExtra("keyword", keyword);
         context.startActivity(intent);
     }
 }
