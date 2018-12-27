@@ -21,7 +21,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void initImmersionBar() {
         //在BaseActivity里初始化
         ImmersionBar.with(this)
-                .navigationBarColor(R.color.colorPrimary)
+                .navigationBarColor(R.color.colorWhite)
                 .init();
     }
 

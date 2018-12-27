@@ -36,10 +36,18 @@ public class HandbookFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getContext(), R.layout.fragment_handbook, null);
         bind = DataBindingUtil.bind(view);
-        initImmersionBar();
+//        initImmersionBar();
         initHistorySearchItems();
         initHotItems();
+        initSearchBar();
         return view;
+    }
+
+
+    private void initSearchBar() {
+        bind.searchBar.setOnClickListener(v -> {
+
+        });
     }
 
     private void initHotItems() {
@@ -97,10 +105,10 @@ public class HandbookFragment extends BaseFragment {
 
     @Override
     public void initImmersionBar() {
-        super.initImmersionBar();
         ImmersionBar.with(this)
                 .statusBarDarkFont(true)
                 .fitsSystemWindows(true)
+                .barColor(R.color.colorWhite)
                 .init();
     }
 }

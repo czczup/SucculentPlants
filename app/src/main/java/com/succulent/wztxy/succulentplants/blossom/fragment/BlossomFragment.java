@@ -49,23 +49,23 @@ public class BlossomFragment extends BaseFragment {
     private List<String> images;
     private List<ArticleItem> articles;
     private BlossomArticleAdapter blossomArticleAdapter;
-    private boolean isRefresh;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getContext(), R.layout.fragment_blossom, null);
-        // bind view
         bind = DataBindingUtil.bind(view);
+//        initImmersionBar();
+        initNavigationBar();
         initRecyclerView();
         initView();
         initRefreshLayout();
-        initNavigationBar();
         return view;
     }
 
@@ -165,14 +165,5 @@ public class BlossomFragment extends BaseFragment {
         });
         bind.swipeLayout.setRefreshing(true);
         refresh();
-    }
-
-
-    @Override
-    public void initImmersionBar() {
-        super.initImmersionBar();
-        ImmersionBar.with(this)
-                .statusBarDarkFont(true)
-                .init();
     }
 }

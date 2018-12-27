@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.gyf.barlibrary.ImmersionBar;
 import com.succulent.wztxy.succulentplants.blossom.fragment.BlossomFragment;
 import com.succulent.wztxy.succulentplants.common.activity.BaseActivity;
 import com.succulent.wztxy.succulentplants.common.util.NoScrollViewPager;
@@ -109,6 +110,11 @@ public class MainActivity extends BaseActivity {
                 switch (item.getItemId()) {
                     case R.id.i_blossom:
                         position = 0;
+//                        ImmersionBar.with(MainActivity.this)
+//                                .statusBarDarkFont(true)
+//                                .fitsSystemWindows(true)
+//                                .barColor(R.color.colorWhite)
+//                                .init();
                         break;
                     case R.id.i_handbook:
                         position = 1;

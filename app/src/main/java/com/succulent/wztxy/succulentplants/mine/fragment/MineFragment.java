@@ -28,13 +28,19 @@ public class MineFragment extends BaseFragment implements MyOneLineView.OnRootCl
         // get title
     }
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getContext(), R.layout.fragment_mine, null);
         // bind view
         binding = DataBindingUtil.bind(view);
+//        initImmersionBar();
+        initView();
+        return view;
+    }
 
+    private void initView() {
         binding.avatarItem.initMine(R.mipmap.avatar1, "熊童子饲养员", "", true)
                 .setOnRootClickListener(this, 0)
                 .setLeftIconSize(50,50)
@@ -62,8 +68,6 @@ public class MineFragment extends BaseFragment implements MyOneLineView.OnRootCl
         binding.logoutItem.initMine(R.drawable.ic_plant7_24dp, "退出登录", "", true)
                 .setOnRootClickListener(this, 7)
                 .showDivider(true, true);
-
-        return view;
     }
 
     @Override
@@ -92,11 +96,11 @@ public class MineFragment extends BaseFragment implements MyOneLineView.OnRootCl
 
     @Override
     public void initImmersionBar() {
-        super.initImmersionBar();
         ImmersionBar.with(this)
                 .statusBarDarkFont(true)
                 .fitsSystemWindows(true)
-                .statusBarColor(R.color.colorWhite)
+                .barColor(R.color.colorWhite)
                 .init();
+
     }
 }

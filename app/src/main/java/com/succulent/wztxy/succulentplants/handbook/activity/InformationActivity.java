@@ -45,6 +45,7 @@ public class InformationActivity extends BaseActivity {
         ImmersionBar.with(this)
                 .navigationBarColor(R.color.colorPrimary)
                 .statusBarColor(R.color.colorWhite)
+                .statusBarDarkFont(true)
                 .fitsSystemWindows(true)
                 .init();
     }

@@ -19,7 +19,7 @@
             android:paddingBottom="15dp">
 
             <TextView
-                android:id="@+id/wiki"
+                android:id="@+id/wiki1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="植物百科"
