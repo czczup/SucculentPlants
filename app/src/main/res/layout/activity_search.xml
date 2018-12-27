@@ -20,6 +20,7 @@
                 android:layout_marginRight="50dp"/>
 
             <TextView
+                android:id="@+id/cancel_textview"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_width="wrap_content"

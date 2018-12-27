@@ -42,7 +42,7 @@
 
         <!--item 中间部分的输入框（有则显示五则隐藏，默认隐藏）-->
         <EditText
-            android:id="@+id/edit_content_search"
+            android:id="@+id/edit_content"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"

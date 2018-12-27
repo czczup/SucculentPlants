@@ -45,7 +45,7 @@ public class HandbookFragment extends BaseFragment {
 
 
     private void initSearchBar() {
-        bind.searchBar.findViewById(R.id.edit_content).setOnClickListener(v -> {
+        bind.searchBar.findViewById(R.id.edit_content_search).setOnClickListener(v -> {
             Log.d(TAG, "initSearchBar: click");
             SearchActivity.actionStart(getActivity());
         });

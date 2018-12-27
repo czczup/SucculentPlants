@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.succulent.wztxy.succulentplants.R;
@@ -24,7 +26,21 @@ public class SearchActivity extends BaseActivity {
     }
 
     private void initSearchBar() {
-        bind.searchBar.findViewById(R.id.edit_content_search).setFocusable(true);
+        EditText editText = bind.searchBar.findViewById(R.id.edit_content_search);
+        editText.setFocusableInTouchMode(true);
+        editText.requestFocus();
+        bind.cancelTextview.setOnClickListener(v -> {
+            finish();
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+        });
+        new Thread(new Runnable() {
+            public void run() {
+                InputMethodManager inputManager = (InputMethodManager)editText.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.showSoftInput(editText, 0);
+                inputManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
+            }
+        }).start();
     }
 
     private void initView() {
