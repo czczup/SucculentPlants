@@ -14,6 +14,7 @@ import com.succulent.wztxy.succulentplants.R;
 import com.succulent.wztxy.succulentplants.common.fragment.BaseFragment;
 import com.succulent.wztxy.succulentplants.databinding.FragmentHandbookBinding;
 import com.succulent.wztxy.succulentplants.handbook.activity.InformationActivity;
+import com.succulent.wztxy.succulentplants.handbook.activity.SearchActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,10 +45,14 @@ public class HandbookFragment extends BaseFragment {
 
 
     private void initSearchBar() {
-        bind.searchBar.setOnClickListener(v -> {
-
+        bind.searchBar.findViewById(R.id.edit_content).setOnClickListener(v -> {
+            Log.d(TAG, "initSearchBar: click");
+            SearchActivity.actionStart(getActivity());
         });
     }
+
+
+
 
     private void initHotItems() {
         hotItems = new ArrayList<>();

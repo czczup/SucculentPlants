@@ -29,7 +29,8 @@
         android:maxLines="1"
         android:textSize="14sp"
         android:layout_marginLeft="10sp"
-        android:hint="输个多肉试试"/>
+        android:hint="输个多肉试试"
+        android:focusable="false"/>
 
     <TextView
         android:id="@+id/tv_right_text"
