@@ -26,6 +26,11 @@ public class FamilyActivity extends PlantCategoryActivity {
     private List<SucculentFamily> succulentFamilies;
 
     @Override
+    public ActivityPlantCategoryBinding getBind() {
+        return bind;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bind = super.getBind();
@@ -44,6 +49,12 @@ public class FamilyActivity extends PlantCategoryActivity {
         familyItemAdapter = new FamilyItemAdapter(R.layout.item_empty, succulentFamilies);
         familyItemAdapter.openLoadAnimation();
         familyItemAdapter.setNotDoAnimationCount(3);
+        familyItemAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                GenusActivity.actionStart(FamilyActivity.this, Integer.parseInt(succulentFamilies.get(position).getId()));
+            }
+        });
         bind.recyclerView.setAdapter(familyItemAdapter);
         bind.recyclerView.setLayoutManager(new LinearLayoutManager(FamilyActivity.this));
         bind.recyclerView.setNestedScrollingEnabled(false);

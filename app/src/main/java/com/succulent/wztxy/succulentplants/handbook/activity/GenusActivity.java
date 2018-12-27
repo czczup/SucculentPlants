@@ -6,7 +6,10 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.succulent.wztxy.succulentplants.R;
@@ -17,6 +20,7 @@ import com.succulent.wztxy.succulentplants.handbook.model.SucculentGenus;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class GenusActivity extends PlantCategoryActivity {
 
@@ -26,15 +30,29 @@ public class GenusActivity extends PlantCategoryActivity {
     private List<SucculentGenus> succulentGenus;
     private Intent intent;
     private int familyId;
+    private Map<Integer, String> id2Name;
+
+    @Override
+    public ActivityPlantCategoryBinding getBind() {
+        return bind;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bind = super.getBind();
+        id2Name = super.getId2Name();
         intent = getIntent();
         familyId = intent.getIntExtra("familyId", -1);
         initData();
         initRecyclerView();
+        initLinkTextView();
+    }
+
+    private void initLinkTextView() {
+        bind.rightArrow1.setVisibility(View.VISIBLE);
+        bind.succulentLink2.setText(id2Name.get(familyId));
+        bind.succulentLink1.setTextColor(getResources().getColor(R.color.colorPink));
     }
 
     private void initData() {
@@ -53,6 +71,15 @@ public class GenusActivity extends PlantCategoryActivity {
         genusItemAdapter = new GenusItemAdapter(R.layout.item_empty, succulentGenus);
         genusItemAdapter.openLoadAnimation();
         genusItemAdapter.setNotDoAnimationCount(3);
+        genusItemAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                SpeciesActivity.actionStart(GenusActivity.this,
+                        Integer.parseInt(succulentGenus.get(position).getId()),
+                        familyId
+                );
+            }
+        });
         bind.recyclerView.setAdapter(genusItemAdapter);
         bind.recyclerView.setLayoutManager(new LinearLayoutManager(GenusActivity.this));
         bind.recyclerView.setNestedScrollingEnabled(false);

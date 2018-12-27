@@ -43,17 +43,54 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"/>
                 <LinearLayout
+                    android:id="@+id/link_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_margin="15dp">
+
                     <TextView
+                        android:id="@+id/succulent_link1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="多肉百科"
                         android:layout_marginRight="5dp"
                         android:textSize="14sp"
                         android:textColor="@color/colorDeepGray"/>
+
+                    <ImageView android:id="@+id/right_arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/homepage_right_arrow"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/succulent_link2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorDeepGray"/>
+
+                    <ImageView android:id="@+id/right_arrow2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/homepage_right_arrow"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/succulent_link3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorDeepGray"/>
+
+
 
 
                 </LinearLayout>
