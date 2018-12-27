@@ -163,6 +163,7 @@
                 android:background="#efefef" />
 
             <LinearLayout
+                android:id="@+id/plant_category_tree"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

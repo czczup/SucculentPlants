@@ -1,5 +1,6 @@
-package com.succulent.wztxy.succulentplants.mine.view;
+package com.succulent.wztxy.succulentplants.common.util;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -11,7 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.succulent.wztxy.succulentplants.R;
-import com.succulent.wztxy.succulentplants.common.util.DensityUtils;
 
 
 public class MyOneLineView extends LinearLayout {
@@ -71,8 +71,14 @@ public class MyOneLineView extends LinearLayout {
 
     public MyOneLineView(Context context, AttributeSet attrs) {
         super(context, attrs);
-
     }
+
+//    private void initDefault(Context context, AttributeSet attrs) {
+//        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.MyOneLineView);
+//        String style = array.getString(R.styleable.MyOneLineView_style);
+//        switch (style)
+//
+//    }
 
     /**
      * 初始化各个控件

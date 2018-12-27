@@ -13,7 +13,9 @@ import com.gyf.barlibrary.ImmersionBar;
 import com.succulent.wztxy.succulentplants.R;
 import com.succulent.wztxy.succulentplants.common.fragment.BaseFragment;
 import com.succulent.wztxy.succulentplants.databinding.FragmentHandbookBinding;
+import com.succulent.wztxy.succulentplants.handbook.activity.FamilyActivity;
 import com.succulent.wztxy.succulentplants.handbook.activity.InformationActivity;
+import com.succulent.wztxy.succulentplants.handbook.activity.PlantCategoryActivity;
 import com.succulent.wztxy.succulentplants.handbook.activity.SearchActivity;
 
 import java.util.ArrayList;
@@ -40,8 +42,17 @@ public class HandbookFragment extends BaseFragment {
         initHistorySearchItems();
         initHotItems();
         initSearchBar();
+        initPlantCategoryTree();
         return view;
     }
+
+    private void initPlantCategoryTree() {
+        bind.plantCategoryTree.setOnClickListener(v -> {
+            FamilyActivity.actionStart(getActivity());
+        });
+    }
+
+
 
 
     private void initSearchBar() {

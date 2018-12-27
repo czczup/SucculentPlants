@@ -9,7 +9,7 @@ import com.gyf.barlibrary.ImmersionBar;
 import com.succulent.wztxy.succulentplants.R;
 import com.succulent.wztxy.succulentplants.common.activity.BaseActivity;
 import com.succulent.wztxy.succulentplants.databinding.ActivityChangeNicknameBinding;
-import com.succulent.wztxy.succulentplants.mine.view.MyOneLineView;
+import com.succulent.wztxy.succulentplants.common.util.MyOneLineView;
 
 public class ChangeNicknameActivity extends BaseActivity implements MyOneLineView.OnArrowClickListener {
 

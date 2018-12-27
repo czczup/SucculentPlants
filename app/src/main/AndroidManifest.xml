@@ -38,7 +38,11 @@
         <activity android:name=".blossom.activity.ArticleActivity" />
         <activity android:name=".blossom.activity.CategroyArticleActivity" />
         <activity android:name=".handbook.activity.InformationActivity" />
-        <activity android:name=".handbook.activity.SearchActivity"></activity>
+        <activity android:name=".handbook.activity.SearchActivity" />
+        <activity android:name=".handbook.activity.PlantCategoryActivity" />
+        <activity android:name=".handbook.activity.FamilyActivity" />
+        <activity android:name=".handbook.activity.GenusActivity" />
+        <activity android:name=".handbook.activity.SpeciesActivity"></activity>
     </application>
 
 </manifest>

@@ -9,43 +9,43 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/avatar_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/history_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/contribution_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/evaluate_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/roast_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/share_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/about_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/logout_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

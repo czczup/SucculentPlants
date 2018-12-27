@@ -9,7 +9,7 @@ import com.gyf.barlibrary.ImmersionBar;
 import com.succulent.wztxy.succulentplants.R;
 import com.succulent.wztxy.succulentplants.common.activity.BaseActivity;
 import com.succulent.wztxy.succulentplants.databinding.ActivityChangeIntroductionBinding;
-import com.succulent.wztxy.succulentplants.mine.view.MyOneLineView;
+import com.succulent.wztxy.succulentplants.common.util.MyOneLineView;
 
 public class ChangeIntroductionActivity extends BaseActivity implements MyOneLineView.OnArrowClickListener {
 

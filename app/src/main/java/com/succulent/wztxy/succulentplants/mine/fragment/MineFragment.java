@@ -16,7 +16,7 @@ import com.succulent.wztxy.succulentplants.mine.activity.avatar.AvatarActivity;
 import com.succulent.wztxy.succulentplants.mine.activity.contribution.MyContributionActivity;
 import com.succulent.wztxy.succulentplants.mine.activity.history.RecognitionHistoryActivity;
 import com.succulent.wztxy.succulentplants.mine.activity.roast.RoastActivity;
-import com.succulent.wztxy.succulentplants.mine.view.MyOneLineView;
+import com.succulent.wztxy.succulentplants.common.util.MyOneLineView;
 
 
 public class MineFragment extends BaseFragment implements MyOneLineView.OnRootClickListener{

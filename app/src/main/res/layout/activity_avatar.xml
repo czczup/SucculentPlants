@@ -25,22 +25,22 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
                 android:textSize="18sp"/>
         </android.support.v7.widget.Toolbar>
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/avatar_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/nickname_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/gender_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.succulent.wztxy.succulentplants.mine.view.MyOneLineView
+        <com.succulent.wztxy.succulentplants.common.util.MyOneLineView
             android:id="@+id/introduction_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

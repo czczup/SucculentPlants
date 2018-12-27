@@ -46,4 +46,14 @@ public class SucculentFamily {
     public void setCount_item(String count_item) {
         this.count_item = count_item;
     }
+
+    @Override
+    public String toString() {
+        return "SucculentFamily{" +
+                "id='" + id + '\'' +
+                ", name_cn='" + name_cn + '\'' +
+                ", name_en='" + name_en + '\'' +
+                ", count_item='" + count_item + '\'' +
+                '}';
+    }
 }

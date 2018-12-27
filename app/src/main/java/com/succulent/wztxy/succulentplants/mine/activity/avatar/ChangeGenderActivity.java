@@ -4,13 +4,12 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
 import com.gyf.barlibrary.ImmersionBar;
 import com.succulent.wztxy.succulentplants.R;
 import com.succulent.wztxy.succulentplants.common.activity.BaseActivity;
 import com.succulent.wztxy.succulentplants.databinding.ActivityChangeGenderBinding;
-import com.succulent.wztxy.succulentplants.mine.view.MyOneLineView;
+import com.succulent.wztxy.succulentplants.common.util.MyOneLineView;
 
 public class ChangeGenderActivity extends BaseActivity implements MyOneLineView.OnRootClickListener {
     private ActivityChangeGenderBinding bind;
