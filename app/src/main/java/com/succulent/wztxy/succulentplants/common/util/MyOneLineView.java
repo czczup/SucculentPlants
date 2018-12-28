@@ -112,7 +112,7 @@ public class MyOneLineView extends LinearLayout {
     }
 
     /**
-     * 默认情况下的样子  icon + 文字 + 右箭头 + 下分割线
+     * 默认情况下的样子  ic_icon + 文字 + 右箭头 + 下分割线
      *
      * @param iconRes     icon图片
      * @param textContent 文字内容
@@ -147,7 +147,7 @@ public class MyOneLineView extends LinearLayout {
 
 
     /**
-     * 我的页面每一行  icon + 文字 + 右箭头（显示/不显示） + 右箭头左边的文字（显示/不显示）+ 下分割线
+     * 我的页面每一行  ic_icon + 文字 + 右箭头（显示/不显示） + 右箭头左边的文字（显示/不显示）+ 下分割线
      *
      * @param iconRes     icon图片
      * @param textContent 文字内容
@@ -193,7 +193,7 @@ public class MyOneLineView extends LinearLayout {
 
 
     /**
-     * icon + 文字 + edit + 下分割线
+     * ic_icon + 文字 + edit + 下分割线
      *
      * @return
      */
