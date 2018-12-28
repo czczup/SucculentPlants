@@ -108,7 +108,7 @@ public class SearchActivity extends BaseActivity {
         speciesItemAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                InformationActivity.actionStart(SearchActivity.this, succulentSpecies.get(position).getName_cn());
+                InformationActivity.actionStart(SearchActivity.this, results.get(position).getName_cn());
             }
         });
         bind.recyclerView.setAdapter(speciesItemAdapter);
